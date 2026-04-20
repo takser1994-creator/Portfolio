@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "Clash Grotesk";
+  src: url("./fonts/ClashGrotesk-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Clash Grotesk";
+  src: url("./fonts/ClashGrotesk-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Clash Grotesk";
+  src: url("./fonts/ClashGrotesk-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  line-height: normal;
+  background-color: var(--color-gray-1300);
+}
+
+:root {
+  /* Figma Variables */
+
+  /* Color */
+  --color: #101010;
+
+  /* Common Style Variables */
+
+  /* Color */
+  --Border: #5a5a5a;
+  --color-darkslategray-100: #444;
+  --color-darkslategray-200: #2e2e2e;
+  --color-dimgray-100: #5e5e5e;
+  --color-firebrick-100: #c6161d;
+  --color-firebrick-200: #a11616;
+  --color-gainsboro-100: #e6e6e6;
+  --color-gainsboro-200: #dadada;
+  --color-gainsboro-300: rgba(230, 230, 230, 0.09);
+  --color-gray-100: #fbfbfb;
+  --color-gray-200: #939393;
+  --color-gray-300: #898989;
+  --color-gray-400: #2c2c2c;
+  --color-gray-500: #2c2b2b;
+  --color-gray-600: #2b2b2b;
+  --color-gray-700: #2b2a2a;
+  --color-gray-800: #2a2929;
+  --color-gray-900: #282828;
+  --color-gray-1000: #222;
+  --color-gray-1100: #1c1c1c;
+  --color-gray-1200: #131313;
+  --color-gray-1300: #121315;
+  --color-gray-1400: rgba(255, 255, 255, 0.7);
+  --color-gray-1500: rgba(28, 28, 28, 0.7);
+  --color-gray-1600: rgba(255, 255, 255, 0.66);
+  --color-indianred: #e05454;
+  --color-lightgreen: #7cd168;
+  --color-orange: #f09302;
+  --color-silver-100: #c5c5c5;
+  --color-silver-200: #bbb;
+  --color-white: #fff;
+  --Grey-05: #242634;
+  --Red: #b92f2f;
+
+  /* Gap */
+  --gap-1: 1px;
+  --gap-6: 6px;
+  --gap-8: 8px;
+  --gap-10: 10px;
+  --gap-12: 12px;
+  --gap-15: 15px;
+  --gap-16: 16px;
+  --gap-20: 20px;
+  --gap-23: 23px;
+  --gap-25: 25px;
+  --gap-50: 50px;
+  --gap-100: 100px;
+
+  /* Padding */
+  --padding-0: 0px;
+  --padding-1: 1px;
+  --padding-10: 10px;
+  --padding-12: 12px;
+  --padding-15: 15px;
+  --padding-16: 16px;
+  --padding-18: 18px;
+  --padding-19: 19px;
+  --padding-20: 20px;
+  --padding-21: 21px;
+  --padding-22: 22px;
+  --padding-26: 26px;
+  --padding-27: 27px;
+  --padding-29: 29px;
+  --padding-30: 30px;
+  --padding-32: 32px;
+  --padding-39: 39px;
+  --padding-40: 40px;
+  --padding-44: 44px;
+  --padding-49: 49px;
+  --padding-60: 60px;
+  --padding-63: 63px;
+  --padding-75: 75px;
+  --padding-100: 100px;
+
+  /* BorderRadius */
+  --br-0: 0px;
+  --br-3: 3px;
+  --br-6: 6px;
+  --br-8: 8px;
+  --br-11: 11px;
+  --br-12: 12px;
+  --br-24: 24px;
+  --br-100: 100px;
+
+  /* Font */
+  --font-clash-grotesk: Clash Grotesk;
+  --font-inter: Inter;
+  --font-space-grotesk: Space Grotesk;
+  --font-space-mono: Space Mono;
+
+  /* FontSize */
+  --fs-12: 12px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-19: 19px;
+  --fs-20: 20px;
+  --fs-21: 21px;
+  --fs-22: 22px;
+  --fs-24: 24px;
+  --fs-26: 26px;
+  --fs-27: 27px;
+  --fs-29: 29px;
+  --fs-30: 30px;
+  --fs-32: 32px;
+  --fs-34: 34px;
+  --fs-36: 36px;
+  --fs-45: 45px;
+  --fs-48: 48px;
+  --fs-56: 56px;
+
+  /* Borders */
+  --border-1: 1px solid var(--Border);
+  --border-2: 0.5px solid var(--Border);
+  --border-3: 3px solid var(--color-white);
+  --border-4: 1px solid var(--color-white);
+
+  /* Shadows */
+  --Dark: 6px 4px 8px rgba(26, 26, 26, 0.24);
+  --New: 0px 4px 24px rgba(0, 0, 0, 0.55);
+
+  /* Gradients */
+  --Cards: linear-gradient(101.85deg, #2f2f2f, var(--color-gray-800));
+  --gradient-1: linear-gradient(-90deg, #ab2a28, #c5161d 50%, #d28932);
+  --gradient-2: linear-gradient(
+    180deg,
+    var(--color-gray-1300),
+    rgba(18, 19, 21, 0)
+  );
+
+  /* WidthHeights */
+  --height-4: 4px;
+  --height-6: 6px;
+  --height-14: 14px;
+  --height-20: 20px;
+  --height-32: 32px;
+  --height-40: 40px;
+  --height-48: 48px;
+  --height-80: 80px;
+  --height-350: 350px;
+  --height-433: 433px;
+  --height-670: 670px;
+  --height-46_3: 46.3px;
+  --height-auto: auto;
+  --width-14: 14px;
+  --width-20: 20px;
+  --width-32: 32px;
+  --width-40: 40px;
+  --width-48: 48px;
+  --width-440: 440px;
+  --width-555: 555px;
+  --width-590: 590px;
+  --width-670: 670px;
+  --width-1360: 1360px;
+  --width-44_5: 44.5px;
+  --width-554_5: 554.5px;
+
+  /* LineHeights */
+  --lh-16: 16px;
+  --lh-20: 20px;
+
+  --left-0: 0px;
+  --top-0: 0px;
+}

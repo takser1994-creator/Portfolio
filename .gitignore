@@ -1,2 +1,9 @@
 .DS_Store
 **/.DS_Store
+node_modules/
+.parcel-cache/
+dist/
+*.log
+# Large design source files (keep locally, don't ship)
+*.psd
+**/mock-ups/*.png

@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sleep Well Stories — Case Study · Mark Takser</title>
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f%5B%5D=clash-grotesk@400,500,600,700&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f5efdc;
+  --cream-2:#ede5cf;
+  --cream-3:#ebe3cb;
+  --purple:#413F5A;
+  --purple-2:#5A5876;
+  --purple-muted:#6b6783;
+  --orange:#F2AA4E;
+  --orange-dark:#e08a2a;
+  --text:#413F5A;
+  --text-muted:#5a5670;
+  --text-soft:#6b6783;
+  --border:rgba(65,63,90,.15);
+  --border-soft:rgba(65,63,90,.08);
+  --white:#ffffff;
+  --shadow-sm:0 2px 8px rgba(65,63,90,.08);
+  --shadow-md:0 8px 24px rgba(65,63,90,.12);
+  --shadow-lg:0 20px 50px rgba(65,63,90,.18);
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --sans:'ClashGrotesk-Variable','Clash Grotesk',-apple-system,Segoe UI,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  -webkit-font-smoothing:antialiased;
+  background:var(--cream);
+  color:var(--text);
+  font-size:16px;
+  line-height:1.6;
+  font-weight:500;
+}
+img,svg,video{max-width:100%;height:auto;display:block}
+a{color:var(--purple);text-decoration:none;border-bottom:1px solid rgba(65,63,90,.3);transition:color .15s,border-color .15s}
+a:hover{color:var(--orange-dark);border-color:var(--orange-dark)}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 22px;border-radius:6px;border:none;
+  background:var(--orange);color:var(--purple);
+  font-family:var(--sans);font-size:13px;font-weight:600;
+  cursor:pointer;transition:background .15s,color .15s;
+  text-decoration:none;line-height:1.2;
+}
+.btn:hover{background:var(--orange-dark);color:var(--purple);border-color:transparent}
+.label{
+  font-family:var(--mono);font-size:10px;font-weight:700;
+  letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--orange-dark);
+}
+/* Layout */
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+.wrap-wide{max-width:1100px;margin:0 auto;padding:0 24px}
+/* Top bar — hidden by default, slides down on scroll */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(245,239,220,.94);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border-soft);
+  transform:translateY(-100%);
+  transition:transform .35s cubic-bezier(.4,0,.2,1);
+}
+.topbar.is-visible{transform:translateY(0)}
+.topbar-inner{
+  max-width:1100px;margin:0 auto;padding:14px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.topbar-back{
+  font-family:var(--mono);font-size:11px;font-weight:700;
+  letter-spacing:1px;text-transform:uppercase;
+  color:var(--purple-muted);border:none;
+}
+.topbar-back:hover{color:var(--orange-dark)}
+.topbar-title{
+  font-size:14px;font-weight:600;color:var(--purple);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.topbar-title span{color:var(--purple-muted);font-weight:500}
+.topbar-cta{
+  font-family:var(--mono);font-size:10px;font-weight:700;
+  letter-spacing:1px;text-transform:uppercase;
+  padding:8px 14px;border-radius:5px;
+  background:var(--purple);color:var(--orange);
+  border:none;transition:background .15s;
+}
+.topbar-cta:hover{background:var(--purple-2);color:var(--orange);border-color:transparent}
+/* Sleep Well Stories — Hero (Figma-matched) */
+.sws-hero{padding:40px;background:#fff}
+.sws-hero-card{
+  max-width:1360px;margin:0 auto;
+  background:#A18CD1;
+  border-radius:28px;
+  padding:0 149px 0 40px;
+  position:relative;overflow:hidden;
+  box-shadow:0 24px 60px rgba(65,63,90,.18);
+  height:740px;
+  display:grid;
+  grid-template-columns:628px 410px;
+  column-gap:133px;
+  align-items:stretch;
+}
+.sws-hero-grid{display:contents}
+.sws-hero-text{
+  position:relative;z-index:2;
+  align-self:center;
+}
+.sws-h1{
+  font-family:var(--sans);
+  font-size:64px;
+  font-weight:600;
+  line-height:60px;
+  color:#fff;
+  margin:0 0 40px;
+}
+.sws-h1 em{
+  font-style:normal;
+  color:#F7E043;
+}
+.sws-lede{
+  font-family:var(--sans);
+  font-size:24px;
+  line-height:32px;
+  color:#fff;
+  margin:0;
+  font-weight:500;
+  letter-spacing:.24px;
+}
+.sws-lede strong{color:#F7E043;font-weight:600}
+.sws-pills{display:flex;flex-wrap:wrap;gap:32px}
+.sws-pill{
+  font-family:var(--sans);
+  font-size:18px;font-weight:600;
+  color:#34147E;
+  padding:8px 16px;
+  background:#fff;
+  border:none;
+  border-radius:8px;
+  white-space:nowrap;
+}
+.sws-pill span{font-weight:500}
+.sws-hero-visual{
+  position:relative;
+  align-self:stretch;
+  padding-top:99px;
+}
+.sws-phone{
+  width:410px;
+  height:641px;
+  border-left:5px solid #fff;
+  border-right:5px solid #fff;
+  border-top:5px solid #fff;
+  border-top-left-radius:44px;
+  border-top-right-radius:44px;
+  position:relative;
+  overflow:hidden;
+  background:radial-gradient(ellipse at 6% 5%,#9D88CD,#C1ACF2);
+}
+.sws-phone-info{
+  position:absolute;
+  top:19px;left:19px;right:12px;
+}
+.sws-phone-meta{
+  font-family:'Open Sans',sans-serif;
+  font-size:16px;font-weight:400;
+  color:#fff;
+  margin-bottom:8px;
+  display:flex;align-items:center;gap:8px;
+}
+.sws-phone-meta-dot{
+  width:4px;height:4px;
+  background:#fff;border-radius:3px;
+  flex-shrink:0;
+}
+.sws-phone-title{
+  font-family:'Raleway',sans-serif;
+  font-size:20px;font-weight:700;
+  color:#F7E043;
+  margin:0 0 8px;
+  line-height:normal;
+}
+.sws-phone-text{
+  font-family:'Open Sans',sans-serif;
+  font-size:16px;
+  line-height:normal;
+  color:#fff;
+  margin:0;
+  font-weight:400;
+}
+.sws-cloud{position:absolute;pointer-events:none;z-index:1}
+.sws-cloud-1{top:197px;left:133px;width:80px}
+.sws-cloud-2{top:221px;right:0;width:59px}
+.sws-cloud-3{top:180px;left:-40px;width:80px}
+.sws-phone-illus{
+  position:absolute;
+  top:206px;left:16px;right:16px;
+  height:295px;
+  display:flex;align-items:flex-end;justify-content:center;
+  pointer-events:none;
+  z-index:2;
+}
+.sws-illus-main{
+  width:249px;height:295px;
+  display:block;
+  object-fit:contain;object-position:bottom center;
+}
+.sws-player{
+  position:absolute;
+  left:-12px;right:-12px;
+  bottom:13px;
+  z-index:5;
+}
+.sws-player-svg{width:100%;height:auto;display:block}
+/* Progress bar + thumb + play-button animations */
+.sws-progress-fill{
+  transform-origin:45px 55px;
+  transform:scaleX(.15);
+}
+.sws-progress-thumb{transform:translateX(0)}
+.sws-play-btn{transform-origin:212.5px 97px}
+@keyframes swsProgressFill{
+  0%{transform:scaleX(.15)}
+  95%,100%{transform:scaleX(1)}
+}
+@keyframes swsProgressThumb{
+  0%{transform:translateX(0)}
+  95%,100%{transform:translateX(285px)}
+}
+@keyframes swsPlayPulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+}
+@media (prefers-reduced-motion:no-preference){
+  .sws-progress-fill{animation:swsProgressFill 14s linear infinite}
+  .sws-progress-thumb{animation:swsProgressThumb 14s linear infinite}
+  .sws-play-btn{animation:swsPlayPulse 2.6s ease-in-out infinite}
+}
+
+/* Mobile */
+@media (max-width:960px){
+  .sws-hero{padding:16px}
+  .sws-hero-card{
+    padding:40px 24px 0;
+    border-radius:24px;
+    grid-template-columns:1fr;
+    column-gap:0;
+    height:auto;
+  }
+  .sws-hero-text{align-self:auto}
+  .sws-hero-visual{padding-top:32px;display:flex;justify-content:center}
+  .sws-h1{font-size:clamp(32px,7vw,48px)}
+  .sws-lede{font-size:20px;line-height:28px;max-width:none}
+  .sws-phone{
+    width:100%;max-width:380px;
+    height:560px;
+    margin:0 auto;
+  }
+  .sws-phone-meta{font-size:13px}
+  .sws-phone-title{font-size:17px}
+  .sws-phone-text{font-size:13px}
+  .sws-phone-illus{top:170px;height:240px}
+  .sws-illus-main{width:200px;height:240px}
+  .sws-cloud-1{top:140px;left:60px;width:60px}
+  .sws-cloud-2{top:170px;width:45px}
+  .sws-player{bottom:10px;left:-7px;right:-7px}
+}
+@media (max-width:560px){
+  .sws-hero{padding:8px}
+  .sws-hero-card{padding:32px 18px 0;border-radius:20px}
+  .sws-h1{font-size:clamp(28px,7vw,40px)}
+  .sws-lede{font-size:18px;line-height:26px}
+  .sws-phone{
+    max-width:340px;
+    height:500px;
+    border-width:4px;
+    border-top-left-radius:36px;
+    border-top-right-radius:36px;
+  }
+  .sws-phone-info{top:16px;left:14px;right:14px}
+  .sws-phone-illus{top:150px;height:210px}
+  .sws-illus-main{width:170px;height:210px}
+  .sws-player{bottom:8px;left:-6px;right:-6px}
+}
+/* Sections */
+section{padding:64px 0;border-top:1px solid var(--border-soft)}
+section h2{
+  font-size:clamp(26px,3.5vw,36px);
+  line-height:1.15;letter-spacing:-.5px;
+  font-weight:600;margin-bottom:24px;color:var(--purple);
+}
+section h3{
+  font-size:clamp(20px,2.5vw,26px);
+  line-height:1.25;font-weight:600;
+  margin-top:40px;margin-bottom:14px;color:var(--purple);
+}
+section h4{
+  font-size:15px;font-weight:700;
+  margin-top:24px;margin-bottom:8px;color:var(--purple);
+}
+section p{margin-bottom:16px;color:var(--text-muted);max-width:680px}
+section p strong{color:var(--purple);font-weight:700}
+section ul{margin:12px 0 20px 20px;color:var(--text-muted)}
+section ul li{margin-bottom:8px;padding-left:4px}
+section ul li::marker{color:var(--orange-dark)}
+/* Context section — team + scope */
+.context-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;margin-top:28px;
+}
+.context-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:10px;padding:22px 24px;
+}
+.context-card h4{margin-top:0;margin-bottom:12px;font-family:var(--mono);font-size:10px;letter-spacing:1.2px;color:var(--orange-dark);text-transform:uppercase}
+.context-card ul{margin:0 0 0 0;list-style:none}
+.context-card ul li{padding-left:0;font-size:14px;color:var(--text-muted);margin-bottom:6px}
+.context-card ul li strong{color:var(--purple);font-weight:600}
+/* Research setup box */
+.research-setup{
+  background:var(--cream-2);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:28px 32px;margin:28px 0 40px;
+}
+.research-setup p{margin-bottom:12px}
+.research-setup ul{margin-bottom:4px}
+/* Decisions */
+.decision{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:32px 36px;margin-bottom:24px;
+  box-shadow:var(--shadow-sm);
+}
+.decision.star{border-color:var(--orange);border-width:2px;box-shadow:var(--shadow-md)}
+.decision-num{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:10px;font-weight:700;
+  letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--orange-dark);margin-bottom:10px;
+}
+.decision-num .star{color:var(--orange)}
+.decision h3{margin-top:0;margin-bottom:20px;font-size:22px}
+.decision h4{
+  font-family:var(--mono);font-size:10px;
+  letter-spacing:1.2px;text-transform:uppercase;
+  color:var(--orange-dark);margin-top:22px;margin-bottom:10px;
+}
+.decision h4:first-of-type{margin-top:8px}
+.decision p{font-size:15px}
+.decision ul li{font-size:14.5px}
+.decision-short{padding:24px 28px}
+.decision-short h3{font-size:19px;margin-bottom:12px}
+.decision-short p{font-size:14.5px;margin-bottom:10px}
+/* Image cards */
+figure{margin:24px 0}
+figure img,figure video{
+  border-radius:10px;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow-sm);
+}
+figcaption{
+  font-family:var(--mono);font-size:11px;
+  color:var(--purple-muted);margin-top:10px;
+  letter-spacing:.3px;text-align:center;
+}
+.phone-frame{
+  max-width:280px;margin:0 auto;
+}
+.phone-row{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;margin:28px 0;
+}
+.phone-row figure{margin:0}
+.phone-row img{border-radius:14px}
+.phone-row.tight{gap:14px}
+.phone-row.small img{max-width:220px;margin:0 auto}
+/* Wide image */
+.wide-img{margin:28px 0}
+.wide-img img{border-radius:10px;border:1px solid var(--border);box-shadow:var(--shadow-md);width:100%}
+/* SVG grid (characters + places) */
+.svg-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));
+  gap:16px;margin:28px 0;
+  background:var(--cream-2);
+  border:1px solid var(--border);
+  border-radius:12px;padding:28px 24px;
+}
+.svg-grid figure{margin:0;text-align:center}
+.svg-grid img{background:var(--white);border-radius:8px;padding:12px;height:100px;width:100%;object-fit:contain;border:1px solid var(--border-soft)}
+.svg-grid figcaption{margin-top:8px;font-size:10px}
+/* Design system grid */
+.ds-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:18px;margin:28px 0;
+}
+.ds-grid figure{margin:0}
+.ds-grid img{border:1px solid var(--border);border-radius:10px;background:var(--white);padding:8px}
+/* Snail video */
+.snail-wrap{
+  max-width:320px;margin:28px auto;
+  background:var(--purple);
+  border-radius:20px;padding:20px;
+  border:1px solid var(--border);
+}
+.snail-wrap video{border-radius:12px;width:100%}
+.snail-wrap + figcaption{text-align:center;margin-top:10px;font-family:var(--mono);font-size:11px;color:var(--purple-muted)}
+/* Call-out box */
+.callout{
+  border-left:4px solid var(--orange);
+  background:var(--cream-2);
+  padding:20px 24px;margin:24px 0;
+  border-radius:0 8px 8px 0;
+}
+.callout p{margin-bottom:0;font-size:15px;color:var(--text-muted)}
+.callout p strong{color:var(--purple)}
+/* Shipped CTA */
+.shipped-card{
+  background:var(--purple);color:var(--cream);
+  border-radius:14px;padding:40px 44px;margin:32px 0;
+}
+.shipped-card h3{color:var(--cream);margin-top:0}
+.shipped-card p{color:rgba(245,239,220,.85);max-width:580px}
+.shipped-card .meta{
+  display:flex;flex-wrap:wrap;gap:28px;
+  font-family:var(--mono);font-size:11px;
+  color:rgba(245,239,220,.7);letter-spacing:.5px;
+  padding-top:22px;margin-top:22px;
+  border-top:1px dashed rgba(245,239,220,.25);
+}
+.shipped-card .meta b{color:var(--orange);font-weight:700}
+.shipped-card a.btn{margin-top:22px}
+/* Role list */
+.role-block{margin-top:14px}
+.role-block ul{list-style:none;margin:0;padding:0}
+.role-block li{
+  padding:10px 0;border-bottom:1px solid var(--border-soft);
+  font-size:14.5px;color:var(--text-muted);
+}
+.role-block li:last-child{border-bottom:none}
+.role-block li strong{color:var(--purple);font-weight:600;display:block;font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;color:var(--orange-dark)}
+/* Footer */
+.footer{
+  padding:60px 0 80px;
+  border-top:1px solid var(--border-soft);
+  text-align:center;
+}
+.footer p{color:var(--purple-muted);font-size:14px;margin-bottom:18px;max-width:none}
+/* Mobile tweaks */
+@media (max-width:700px){
+  section{padding:44px 0}
+  .decision{padding:22px 20px}
+  .decision-short{padding:18px 18px}
+  .research-setup{padding:20px 22px}
+  .context-card{padding:18px 20px}
+  .shipped-card{padding:28px 24px}
+  .topbar-title{font-size:12px}
+  .topbar-title span{display:none}
+  .topbar-cta{font-size:9px;padding:6px 10px}
+  .wrap,.wrap-wide{padding:0 18px}
+  .topbar-inner{padding:12px 18px;gap:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <a href="../../index.html" class="topbar-back">← BACK TO ROOM</a>
+    <div class="topbar-title">Sleep Well Stories <span>· Case study</span></div>
+    <a href="https://apps.apple.com/de/app/sleepwellstories/id6753594341" target="_blank" rel="noopener" class="topbar-cta">APP STORE ↗</a>
+  </div>
+</div>
+
+<!-- Hero / Section 1 — Sleep Well Stories Figma design -->
+<header class="sws-hero">
+  <div class="sws-hero-card">
+    <div class="sws-hero-grid">
+      <div class="sws-hero-text">
+        <h1 class="sws-h1">An AI bedtime story app <em>parents trust</em></h1>
+        <p class="sws-lede"><strong>Sleep Well Stories</strong> is an iOS app that generates personalised bedtime stories for kids aged 3–12 in under a minute.  Parents describe what the story should be about, answer a few guided questions, and the app writes and narrates it aloud.</p>
+      </div>
+      <div class="sws-hero-visual">
+        <div class="sws-phone">
+          <div class="sws-phone-info">
+            <div class="sws-phone-meta">
+              <span>1 min</span>
+              <span class="sws-phone-meta-dot"></span>
+              <span>44 pages</span>
+            </div>
+            <h3 class="sws-phone-title">Luna and the Midnight Cats</h3>
+            <p class="sws-phone-text">Every night, when the world is fast asleep, Luna tiptoes out into the quiet moonlight. That's when the cats come. Big cats, small cats, striped and spotted — they gather from rooftops…</p>
+          </div>
+          <img src="./assets/layout/Cloud.svg" alt="" class="sws-cloud sws-cloud-1" aria-hidden="true">
+          <img src="./assets/layout/Cloud.svg" alt="" class="sws-cloud sws-cloud-2" aria-hidden="true">
+          <img src="./assets/layout/Cloud.svg" alt="" class="sws-cloud sws-cloud-3" aria-hidden="true">
+          <div class="sws-phone-illus">
+            <img src="./assets/layout/Main%20illustration.svg" alt="Luna with cats under a starry sky" class="sws-illus-main">
+          </div>
+          <div class="sws-player" role="img" aria-label="Audio player — 0:12 of 1:55">
+            <svg class="sws-player-svg" width="425" height="178" viewBox="0 0 425 178" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#sws_p_f0)">
+                <rect x="28" y="12" width="369" height="122" rx="16" fill="white" shape-rendering="crispEdges"/>
+                <!-- timer text "0:12/1:55" -->
+                <path d="M194.693 34.777C194.693 35.4223 194.568 35.998 194.319 36.504C194.077 37.0027 193.743 37.395 193.318 37.681C192.9 37.967 192.42 38.11 191.877 38.11C191.342 38.11 190.861 37.967 190.436 37.681C190.011 37.395 189.673 37.0027 189.424 36.504C189.182 35.998 189.061 35.4223 189.061 34.777C189.061 34.1317 189.182 33.5597 189.424 33.061C189.673 32.555 190.011 32.159 190.436 31.873C190.861 31.5797 191.342 31.433 191.877 31.433C192.42 31.433 192.9 31.5797 193.318 31.873C193.743 32.159 194.077 32.555 194.319 33.061C194.568 33.5597 194.693 34.1317 194.693 34.777ZM193.461 34.777C193.461 34.337 193.395 33.952 193.263 33.622C193.131 33.2847 192.944 33.0243 192.702 32.841C192.46 32.6503 192.185 32.555 191.877 32.555C191.562 32.555 191.283 32.6503 191.041 32.841C190.799 33.0243 190.608 33.2847 190.469 33.622C190.337 33.952 190.271 34.337 190.271 34.777C190.271 35.217 190.337 35.602 190.469 35.932C190.608 36.262 190.799 36.5223 191.041 36.713C191.283 36.8963 191.562 36.988 191.877 36.988C192.185 36.988 192.456 36.8963 192.691 36.713C192.933 36.5223 193.12 36.262 193.252 35.932C193.391 35.602 193.461 35.217 193.461 34.777ZM195.983 33.699V32.302H196.984V33.699H195.983ZM195.983 38V36.592H196.984V38H195.983ZM202.623 36.911V38H198.421V36.911H199.983V33.072C199.917 33.16 199.814 33.2517 199.675 33.347C199.536 33.4423 199.378 33.534 199.202 33.622C199.033 33.7027 198.861 33.7687 198.685 33.82C198.509 33.8713 198.348 33.897 198.201 33.897V32.764C198.348 32.764 198.516 32.72 198.707 32.632C198.898 32.544 199.085 32.4413 199.268 32.324C199.459 32.1993 199.62 32.082 199.752 31.972C199.884 31.8547 199.961 31.7703 199.983 31.719H201.226V36.911H202.623ZM203.324 38C203.324 37.692 203.349 37.4097 203.401 37.153C203.452 36.889 203.54 36.6397 203.665 36.405C203.797 36.1703 203.976 35.9503 204.204 35.745C204.438 35.5323 204.735 35.3307 205.095 35.14C205.351 34.9933 205.593 34.865 205.821 34.755C206.048 34.6377 206.25 34.524 206.426 34.414C206.602 34.2967 206.737 34.172 206.833 34.04C206.935 33.908 206.987 33.7577 206.987 33.589C206.987 33.4277 206.943 33.2773 206.855 33.138C206.767 32.9987 206.635 32.8887 206.459 32.808C206.283 32.72 206.07 32.676 205.821 32.676C205.623 32.676 205.439 32.7017 205.271 32.753C205.109 32.8043 204.959 32.874 204.82 32.962C204.688 33.0427 204.567 33.1343 204.457 33.237C204.347 33.3323 204.251 33.4277 204.171 33.523L203.412 32.654C203.485 32.566 203.599 32.467 203.753 32.357C203.914 32.2397 204.105 32.126 204.325 32.016C204.552 31.8987 204.809 31.8033 205.095 31.73C205.381 31.6493 205.692 31.609 206.03 31.609C206.506 31.609 206.913 31.6897 207.251 31.851C207.588 32.005 207.845 32.2213 208.021 32.5C208.204 32.7713 208.296 33.0793 208.296 33.424C208.296 33.6953 208.241 33.9337 208.131 34.139C208.028 34.3443 207.892 34.5277 207.724 34.689C207.555 34.843 207.375 34.9787 207.185 35.096C207.001 35.206 206.829 35.305 206.668 35.393C206.382 35.5323 206.132 35.6607 205.92 35.778C205.714 35.8953 205.538 36.0127 205.392 36.13C205.245 36.24 205.124 36.3573 205.029 36.482C204.933 36.5993 204.853 36.7423 204.787 36.911H208.417V38H203.324ZM215.917 30.19L210.56 38H209.218L214.575 30.19H215.917ZM220.896 36.911V38H216.694V36.911H218.256V33.072C218.19 33.16 218.087 33.2517 217.948 33.347C217.808 33.4423 217.651 33.534 217.475 33.622C217.306 33.7027 217.134 33.7687 216.958 33.82C216.782 33.8713 216.62 33.897 216.474 33.897V32.764C216.62 32.764 216.789 32.72 216.98 32.632C217.17 32.544 217.357 32.4413 217.541 32.324C217.731 32.1993 217.893 32.082 218.025 31.972C218.157 31.8547 218.234 31.7703 218.256 31.719H219.499V36.911H220.896ZM221.882 33.699V32.302H222.883V33.699H221.882ZM221.882 38V36.592H222.883V38H221.882ZM229.798 34.777C229.798 35.4223 229.674 35.998 229.424 36.504C229.182 37.0027 228.849 37.395 228.423 37.681C228.005 37.967 227.525 38.11 226.982 38.11C226.447 38.11 225.967 37.967 225.541 37.681C225.116 37.395 224.779 37.0027 224.529 36.504C224.287 35.998 224.166 35.4223 224.166 34.777C224.166 34.1317 224.287 33.5597 224.529 33.061C224.779 32.555 225.116 32.159 225.541 31.873C225.967 31.5797 226.447 31.433 226.982 31.433C227.525 31.433 228.005 31.5797 228.423 31.873C228.849 32.159 229.182 32.555 229.424 33.061C229.674 33.5597 229.798 34.1317 229.798 34.777ZM228.566 34.777C228.566 34.337 228.5 33.952 228.368 33.622C228.236 33.2847 228.049 33.0243 227.807 32.841C227.565 32.6503 227.29 32.555 226.982 32.555C226.667 32.555 226.388 32.6503 226.146 32.841C225.904 33.0243 225.714 33.2847 225.574 33.622C225.442 33.952 225.376 34.337 225.376 34.777C225.376 35.217 225.442 35.602 225.574 35.932C225.714 36.262 225.904 36.5223 226.146 36.713C226.388 36.8963 226.667 36.988 226.982 36.988C227.29 36.988 227.562 36.8963 227.796 36.713C228.038 36.5223 228.225 36.262 228.357 35.932C228.497 35.602 228.566 35.217 228.566 34.777ZM235.279 36.911V38H231.077V36.911H232.639V33.072C232.573 33.16 232.471 33.2517 232.331 33.347C232.192 33.4423 232.034 33.534 231.858 33.622C231.69 33.7027 231.517 33.7687 231.341 33.82C231.165 33.8713 231.004 33.897 230.857 33.897V32.764C231.004 32.764 231.173 32.72 231.363 32.632C231.554 32.544 231.741 32.4413 231.924 32.324C232.115 32.1993 232.276 32.082 232.408 31.972C232.54 31.8547 232.617 31.7703 232.639 31.719H233.882V36.911H235.279Z" fill="#4A4A4A" fill-opacity="0.44"/>
+                <!-- progress bar track -->
+                <rect x="45" y="53" width="335" height="4" rx="2" fill="#4A4A4A" fill-opacity="0.44"/>
+                <!-- progress bar filled (animated) -->
+                <rect class="sws-progress-fill" x="45" y="52.5" width="335" height="5" rx="2.5" fill="#4A90E2"/>
+                <!-- progress thumb (animated translateX) -->
+                <g class="sws-progress-thumb">
+                  <g filter="url(#sws_p_f2)">
+                    <circle cx="94" cy="54.999" r="6" fill="#4A90E2"/>
+                  </g>
+                </g>
+                <!-- Aa read icon -->
+                <g clip-path="url(#sws_p_c0)">
+                  <path d="M84.5 85.9375H75.5" stroke="#4A4A4A" stroke-width="1.5" stroke-miterlimit="10"/>
+                  <path d="M84.5 91.5625H75.5" stroke="#4A4A4A" stroke-width="1.5" stroke-miterlimit="10"/>
+                  <path d="M84.5 97.1875H75.5" stroke="#4A4A4A" stroke-width="1.5" stroke-miterlimit="10"/>
+                  <path d="M84.5 102.625H60.5" stroke="#4A4A4A" stroke-width="1.5" stroke-miterlimit="10"/>
+                  <path d="M84.5 108.062H60.5" stroke="#4A4A4A" stroke-width="1.5" stroke-miterlimit="10"/>
+                  <path d="M68.9375 97.1875H73.625" stroke="#4A4A4A" stroke-width="1.5" stroke-miterlimit="10"/>
+                  <path d="M62.375 97.1875L66.875 85.9375H67.0625L71.75 97.1875" stroke="#4A4A4A" stroke-width="1.5" stroke-miterlimit="10"/>
+                  <path d="M60.5 97.1875H65.1875" stroke="#4A4A4A" stroke-width="1.5" stroke-miterlimit="10"/>
+                  <path d="M70.1875 93.4375H63.875" stroke="#4A4A4A" stroke-width="1.5" stroke-miterlimit="10"/>
+                </g>
+                <!-- skip back 15 -->
+                <path d="M136.25 102.25V94.75L134.75 96.1562" stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M139.25 101.781C139.642 102.076 140.129 102.25 140.656 102.25C141.951 102.25 143 101.201 143 99.9062C143 98.6118 141.951 97.5625 140.656 97.5625C140.129 97.5625 139.642 97.7368 139.25 98.0311L139.719 94.75H143" stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M131.339 90.5652C127.098 94.4941 126.866 101.095 130.821 105.308C134.776 109.521 141.42 109.752 145.661 105.823C149.902 101.894 150.134 95.2933 146.179 91.08C143.93 88.6835 140.81 87.5756 137.757 87.7887M139.25 85.375L136.576 87.9083L139.25 90.625" stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- play button (animated pulse) -->
+                <g class="sws-play-btn">
+                  <g filter="url(#sws_p_f3)">
+                    <rect x="192.5" y="77" width="40" height="40" rx="20" fill="#4A90E2"/>
+                  </g>
+                  <path d="M210.188 103.2C209.819 103.431 209.445 103.444 209.067 103.239C208.689 103.035 208.5 102.719 208.5 102.291V91.2352C208.5 90.8079 208.689 90.4917 209.067 90.2866C209.445 90.0822 209.819 90.0957 210.188 90.3272L219.206 95.8553C219.538 96.069 219.704 96.3717 219.704 96.7633C219.704 97.155 219.538 97.4577 219.206 97.6714L210.188 103.2Z" fill="white"/>
+                </g>
+                <!-- skip forward 15 -->
+                <path d="M284.25 102.25V94.75L282.75 96.1562" stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M287.25 101.781C287.642 102.076 288.129 102.25 288.656 102.25C289.951 102.25 291 101.201 291 99.9062C291 98.6118 289.951 97.5625 288.656 97.5625C288.129 97.5625 287.642 97.7368 287.25 98.0311L287.719 94.75H291" stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M293.661 90.5652C297.902 94.4941 298.134 101.095 294.179 105.308C290.224 109.521 283.58 109.752 279.339 105.823C275.098 101.894 274.866 95.2933 278.821 91.08C281.07 88.6835 284.19 87.5756 287.243 87.7887M285.75 85.375L288.424 87.9083L285.75 90.625" stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- volume -->
+                <g clip-path="url(#sws_p_c1)">
+                  <mask id="sws_p_m0" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="340" y="85" width="25" height="24">
+                    <path d="M340.5 85H364.5V109H340.5V85Z" fill="white"/>
+                  </mask>
+                  <g mask="url(#sws_p_m0)">
+                    <path d="M346.686 101.686H343.311C342.276 101.686 341.436 100.846 341.436 99.8109V94.1859C341.436 93.1503 342.276 92.3109 343.311 92.3109H346.686V101.686Z" stroke="#4A4A4A" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M346.686 92.3109L354.186 85.9359V108.061L346.686 101.686" stroke="#4A4A4A" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M357.936 91.3734C361.038 91.3734 363.561 93.8965 363.561 96.9984C363.561 100.1 361.038 102.623 357.936 102.623" stroke="#4A4A4A" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M357.936 95.1234C358.972 95.1234 359.811 95.9628 359.811 96.9984C359.811 98.0339 358.972 98.8734 357.936 98.8734" stroke="#4A4A4A" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                </g>
+              </g>
+              <defs>
+                <filter id="sws_p_f0" x="0" y="0" width="425" height="178" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feMorphology radius="4" operator="erode" in="SourceAlpha" result="effect1_dropShadow"/>
+                  <feOffset dy="4"/>
+                  <feGaussianBlur stdDeviation="2"/>
+                  <feComposite in2="hardAlpha" operator="out"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0.0470588 0 0 0 0 0.0470588 0 0 0 0 0.0509804 0 0 0 0.05 0"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feMorphology radius="4" operator="erode" in="SourceAlpha" result="effect2_dropShadow"/>
+                  <feOffset dy="16"/>
+                  <feGaussianBlur stdDeviation="16"/>
+                  <feComposite in2="hardAlpha" operator="out"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0.0470588 0 0 0 0 0.0470588 0 0 0 0 0.0509804 0 0 0 0.1 0"/>
+                  <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape"/>
+                </filter>
+                <filter id="sws_p_f2" x="84" y="44.999" width="20" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feOffset/>
+                  <feGaussianBlur stdDeviation="2"/>
+                  <feComposite in2="hardAlpha" operator="out"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0.392157 0 0 0 0 0 0 0 0 0 0.972549 0 0 0 0.44 0"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                </filter>
+                <filter id="sws_p_f3" x="174.375" y="77" width="76.25" height="76.25" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feMorphology radius="9.0625" operator="erode" in="SourceAlpha" result="effect1_dropShadow"/>
+                  <feOffset dy="18.125"/>
+                  <feGaussianBlur stdDeviation="13.5938"/>
+                  <feComposite in2="hardAlpha" operator="out"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0.820833 0 0 0 0 0.820833 0 0 0 0 0.820833 0 0 0 0.25 0"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                </filter>
+                <clipPath id="sws_p_c0">
+                  <rect width="24" height="24" fill="white" transform="translate(60.5 85)"/>
+                </clipPath>
+                <clipPath id="sws_p_c1">
+                  <rect width="24" height="24" fill="white" transform="translate(340.5 85)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Section 2 — Context & Role -->
+<section id="context">
+  <div class="wrap">
+    <span class="label">01 · Context</span>
+    <h2>Six people, one month, one shipping iOS app.</h2>
+    <p>One-month sprint to design and ship the first version of Sleep Well Stories — an AI-powered bedtime story app for iOS. Shipped to the German App Store on December 8, 2025. Currently live in German and English at €2.99/month.</p>
+
+    <div class="context-grid">
+      <div class="context-card">
+        <h4>★ The team</h4>
+        <ul>
+          <li><strong>Founder / client</strong> — product vision</li>
+          <li><strong>Product owner</strong> — scope and priorities</li>
+          <li><strong>Developer</strong> — iOS engineering</li>
+          <li><strong>QA</strong> — testing and release</li>
+          <li><strong>Marketer</strong> — positioning and launch</li>
+          <li><strong>Me</strong> — sole designer</li>
+        </ul>
+      </div>
+      <div class="context-card">
+        <h4>★ What I owned</h4>
+        <ul>
+          <li><strong>Research</strong> — interviews + competitive audit</li>
+          <li><strong>Wireframes</strong> — user flows and IA</li>
+          <li><strong>Visual design</strong> — colors, type, components</li>
+          <li><strong>Illustrations</strong> — 9 characters + 8 places</li>
+          <li><strong>Interaction</strong> — micro-copy and edge cases</li>
+          <li><strong>Handoff</strong> — dev specs and QA support</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p><strong>Why this matters.</strong> Sole designer at a six-person indie studio means fast decisions, close collaboration, and no committee. It also means you own the full pipeline — from talking to parents to shipping pixels. This case study is about the decisions that came out of that pipeline.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3 — Research → Decisions -->
+<section id="research">
+  <div class="wrap">
+    <span class="label">02 · Research → decisions</span>
+    <h2>Six findings that changed the product.</h2>
+    <p>Before any wireframes, I spent the first two weeks talking to parents and pulling apart the competition. Six findings shaped the product in ways the team hadn't planned for.</p>
+
+    <div class="research-setup">
+      <p><strong>8 parent interviews</strong> — mix of first-time parents and parents with 2+ kids, all with bedtime routines that included stories. Kids aged 3 to 12.</p>
+      <p><strong>Competitive audit</strong> — 5 AI story apps in the App Store, plus a handful of non-AI bedtime apps for contrast.</p>
+      <p><strong>Synthesis</strong> — I turned interview notes and competitor patterns into a decision brief before starting wireframes.</p>
+    </div>
+
+    <!-- Decision 1 — STAR — Nothing between user & first story -->
+    <div class="decision star">
+      <div class="decision-num"><span class="star">★</span> Decision 1 · the star</div>
+      <h3>Nothing between the user and the first story.</h3>
+
+      <h4>What the client wanted</h4>
+      <p>Standard v1 flow: <strong>Splash → Registration → 3 onboarding screens → Home</strong>. Two sources of friction before the user ever touched a story.</p>
+
+      <h4>What the research showed</h4>
+      <p>Every parent I interviewed said some version of the same thing: they wouldn't commit an email or an Apple ID before feeling whether the app worked. The explanatory onboarding was worse — parents said they'd skip it or bounce entirely. The best pitch for an AI story app isn't a tour. It's a story.</p>
+
+      <h4>The decision — remove both sources of friction</h4>
+      <p><strong>1. Killed the explanatory onboarding.</strong> Tapping "I'm new here" on the splash now takes the user directly into the story creation wizard. No tour, no explainers.</p>
+      <p><strong>2. Delayed registration.</strong> The first story is free — no email, no signup, no Apple ID. Only after the first story completes does the app offer to register ("save your stories, add more kids, unlock audiobook mode"). By then the parent has felt the product work.</p>
+
+      <h4>What got cut as proof</h4>
+      <p>The team already had mockups for a 3-screen onboarding flow — "Create personal stories", "One-click story generation", "Audiobook mode." All three were production-ready. I made the case for removing them and shipping straight to the wizard.</p>
+
+      <div class="phone-row tight">
+        <figure>
+          <img src="./assets/cut-from-app/onboarding/One-click%20story%20generation..png" alt="Cut onboarding screen 1/3 — Create Personal Stories">
+          <figcaption>CUT · Onboarding 1/3</figcaption>
+        </figure>
+        <figure>
+          <img src="./assets/cut-from-app/onboarding/One-click%20story%20generation.-1.png" alt="Cut onboarding screen — One-click story generation">
+          <figcaption>CUT · Onboarding 2/3</figcaption>
+        </figure>
+        <figure>
+          <img src="./assets/cut-from-app/onboarding/Audiobook.png" alt="Cut onboarding screen — Audiobook">
+          <figcaption>CUT · Onboarding 3/3</figcaption>
+        </figure>
+      </div>
+
+      <h4>Alternatives I rejected</h4>
+      <ul>
+        <li>Keep onboarding but make it skippable — research showed parents don't skip, they bounce</li>
+        <li>Social login (Apple/Google) as a "lighter" signup — still friction, still pre-value</li>
+        <li>Freemium paywall — same psychological problem, just further down the funnel</li>
+      </ul>
+
+      <h4>Why this one matters most</h4>
+      <p>Two cuts, one principle: <strong>parents judge products in seconds.</strong> Every screen between them and the first story costs a user. Research was clear, the math was clear, and the client agreed to ship with zero friction before value delivery — a level of conviction that's rare in v1 products.</p>
+    </div>
+
+    <!-- Decision 2 — Structured wizard -->
+    <div class="decision star">
+      <div class="decision-num"><span class="star">★</span> Decision 2 · co-star</div>
+      <h3>Structured wizard, not a prompt box.</h3>
+
+      <h4>What the client wanted</h4>
+      <p>A single screen with a free-text input: <em>"Describe the story you want"</em> → press button → AI generates. Fast to build. Minimal onboarding. Maximum AI magic.</p>
+
+      <h4>What the research showed</h4>
+      <p><strong>Parents couldn't articulate what they wanted.</strong> Parents defaulted to vague prompts — <em>"a fun animal story", "something calming"</em> — and the AI returned equally generic output. After a few tries, the app stopped feeling magical.</p>
+      <p><strong>Kids wanted ownership, not just content.</strong> Parents said the same thing: their kids wanted to <em>see themselves</em> in the story. An abstract text description didn't give a kid a sense of being the hero. Personalization had to be visual and concrete, not typed.</p>
+
+      <h4>The decision</h4>
+      <p>Replace the single prompt screen with a <strong>3-step guided wizard</strong>:</p>
+      <ul>
+        <li><strong>Step 1 — Hero.</strong> Pick a character and name it (kids literally type their own name in)</li>
+        <li><strong>Step 2 — Setting.</strong> Where does the story happen? Arctic, castle, farm, space, or custom</li>
+        <li><strong>Step 3 — Length, style, theme, audiobook toggle.</strong> The parent's controls</li>
+      </ul>
+      <p>Structure delivers two things at once: <strong>richer input for the AI</strong> (better prompts → better stories) and <strong>a sense of ownership for the kid</strong> (the hero has their name and looks how they want).</p>
+
+      <figure class="phone-frame">
+        <img src="./assets/screenshots/Set%20up.png" alt="Story creation step 3/3 — length, style, theme, audiobook">
+        <figcaption>Step 3/3 — the parent's controls</figcaption>
+      </figure>
+
+      <h4>Alternatives I rejected</h4>
+      <ul>
+        <li>The client's free-text prompt — research showed it failed for both parents and AI output quality</li>
+        <li>A 5+ step wizard — would have violated the 3-step dropout finding (Decision 6)</li>
+        <li>Separate flows for "quick story" vs "detailed story" — would split attention and double the maintenance surface</li>
+      </ul>
+    </div>
+
+    <!-- Decisions 3-6 — shorter format -->
+    <div class="decision decision-short">
+      <div class="decision-num">Decision 3 · supporting</div>
+      <h3>Multi-child profiles.</h3>
+      <p><strong>Finding —</strong> roughly half the families I interviewed had 2+ kids. Parents rotate kids across nights, or read to both at once. A single-child account assumed a family structure that didn't match reality.</p>
+      <p><strong>Decision —</strong> the account holder can add multiple child profiles. Stories are tagged to the active child. Parent switches child from a profile menu — no need to log out.</p>
+    </div>
+
+    <div class="decision decision-short">
+      <div class="decision-num">Decision 4 · supporting</div>
+      <h3>Audiobook mode.</h3>
+      <p><strong>Finding —</strong> many kids in my interviews were too young to read — or old enough but still wanted to be read to at bedtime. Parents also mentioned story apps during car rides, quiet time, and anywhere they didn't want a screen.</p>
+      <p><strong>Decision —</strong> every story has an audiobook toggle at creation time. Audio stories are marked with a headphone icon in the feed.</p>
+    </div>
+
+    <div class="decision decision-short">
+      <div class="decision-num">Decision 5 · supporting</div>
+      <h3>Recurring heroes in the feed.</h3>
+      <p><strong>Finding —</strong> kids ask for the same characters repeatedly. Every parent mentioned their kid latching onto one hero and asking for more stories with that character — familiarity over novelty.</p>
+      <p><strong>Decision —</strong> the home feed has a <strong>"Meet the heroes"</strong> row — a horizontally scrolling list of the kid's previously-created heroes. One tap starts a new story with an existing hero, skipping the character creation step.</p>
+    </div>
+
+    <div class="decision decision-short">
+      <div class="decision-num">Decision 6 · supporting</div>
+      <h3>The 3-step rule, applied twice.</h3>
+      <p><strong>Finding —</strong> parents described giving up on apps that asked too many questions at setup. Dropout spiked after the 3rd step. More than 3 steps felt like homework.</p>
+      <p><strong>Decision —</strong> applied the rule in two places: <strong>initial kid setup</strong> capped at 1 screen (name, age, gender), and <strong>story creation wizard</strong> capped at 3 steps (hero / setting / style-theme). Everything else was inferred from defaults or asked later, inside the product.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4 — The flow -->
+<section id="flow">
+  <div class="wrap-wide">
+    <div class="wrap" style="padding:0">
+      <span class="label">03 · Walkthrough</span>
+      <h2>The flow — research made visible.</h2>
+      <p>A walkthrough of the shipped product. Not every screen — just the moments where a research finding or a design decision is visible.</p>
+
+      <h3>The creation flow</h3>
+      <p><strong>Splash → straight to creation.</strong> No onboarding, no signup, no tour (Decision 1). "I'm new here" → immediate entry into the wizard.</p>
+    </div>
+
+    <div class="phone-row">
+      <figure>
+        <img src="./assets/screenshots/Splach%20sceen.png" alt="Splash screen with a sheep on a moon">
+        <figcaption>Splash — "I'm new here" goes straight to creation</figcaption>
+      </figure>
+      <figure>
+        <img src="./assets/screenshots/Characters%20%26%20Setting.png" alt="Step 1/3 — choose your hero">
+        <figcaption>Step 1/3 — Hero (kids name their own)</figcaption>
+      </figure>
+      <figure>
+        <img src="./assets/screenshots/Set%20up.png" alt="Step 3/3 — length, style, theme, audiobook">
+        <figcaption>Step 3/3 — parent's controls</figcaption>
+      </figure>
+    </div>
+
+    <div class="wrap" style="padding:0">
+      <h3>Story generating — wait vs. background</h3>
+      <p><strong>Custom snail animation plays during story generation.</strong> For a <strong>short story</strong> (~1 minute), the parent waits and watches the snail. For a <strong>long story</strong> (up to 10 minutes), that's too long — so the user can navigate away to the home feed, browse other stories, or even start creating a second one while the first generates in the background. Different wait behaviors for different content lengths.</p>
+
+      <figure class="snail-wrap">
+        <video src="./assets/animation/Snail_3.mp4" autoplay loop muted playsinline></video>
+      </figure>
+      <figcaption style="font-family:var(--mono);font-size:11px;color:var(--purple-muted);text-align:center;margin-top:-10px">Custom snail loading animation</figcaption>
+
+      <h3>The library flow</h3>
+      <p>The second surface of the app — browsing existing stories. "Meet the heroes" (Decision 5), category chips, search with filter, and custom empty states.</p>
+    </div>
+
+    <div class="phone-row">
+      <figure>
+        <img src="./assets/screenshots/Guest.png" alt="Home feed with Meet the heroes and best stories">
+        <figcaption>Home feed — "Meet the heroes" and category chips</figcaption>
+      </figure>
+      <figure>
+        <img src="./assets/screenshots/Filter%20selected.png" alt="Filter bottom sheet">
+        <figcaption>Filter modal — 5 dimensions, pill-group for length</figcaption>
+      </figure>
+      <figure>
+        <img src="./assets/screenshots/Filter%20active.png" alt="Filtered story grid">
+        <figcaption>Filter applied — badge shows active filters</figcaption>
+      </figure>
+    </div>
+
+    <div class="wrap" style="padding:0">
+      <h3>Tablet adaptation</h3>
+      <p><strong>Research showed something unexpected:</strong> our target families (kids 3–12) were predominantly iPad households. A shared iPad at bedtime was more common than a parent's phone. So the tablet layout wasn't a scaling exercise — it was a first-class surface. Same app, same features, redesigned for the larger canvas.</p>
+    </div>
+
+    <div class="wide-img">
+      <img src="./assets/tablet/Home.png" alt="Tablet home layout">
+    </div>
+
+    <div class="phone-row">
+      <figure>
+        <img src="./assets/tablet/1%20step.png" alt="Tablet wizard step 1">
+        <figcaption>Tablet · Step 1</figcaption>
+      </figure>
+      <figure>
+        <img src="./assets/tablet/2%20step.png" alt="Tablet wizard step 2">
+        <figcaption>Tablet · Step 2</figcaption>
+      </figure>
+      <figure>
+        <img src="./assets/tablet/3%20step.png" alt="Tablet wizard step 3">
+        <figcaption>Tablet · Step 3</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5 — Visual direction -->
+<section id="visual">
+  <div class="wrap-wide">
+    <div class="wrap" style="padding:0">
+      <span class="label">04 · Visual direction</span>
+      <h2>The look — warm bedtime.</h2>
+
+      <h3>Moodboard</h3>
+      <p>Before picking a single color, I pulled together a moodboard: bedtime apps, kids' learning apps, playful illustrations, and the specific tonal range I was aiming for. The goal was <strong>"warm bedtime"</strong> — not clinical, not candy-bright, not sleep-zombie purple. Something that felt like a trusted object on the nightstand.</p>
+    </div>
+
+    <div class="wide-img">
+      <img src="./assets/moodboard/Moodboard.png" alt="Moodboard collage of bedtime and kids app references">
+    </div>
+
+    <div class="wrap" style="padding:0">
+      <h3>Color, type &amp; design system</h3>
+      <p>Three primary colors carry the brand: <strong>Purple #A18CD1</strong> (the hero color of the splash and brand moments), <strong>Bright blue #4A90E2</strong> (CTAs and active states), and <strong>Yellow #F7E043</strong> (highlights and positive moments). Plus a full neutral ramp and a purple gradient for depth.</p>
+      <p>Typography is two faces, strict roles: <strong>Raleway</strong> for headings, buttons, and captions (the confident, slightly rounded voice of the brand), and <strong>Open Sans</strong> for body copy (maximum readability for parents reading at 9pm).</p>
+    </div>
+
+    <div class="wide-img">
+      <img src="./assets/styles/Styles.png" alt="Color and typography system">
+    </div>
+
+    <div class="wrap" style="padding:0">
+      <p>I built out a full component library before shipping — not documentation theatre, but because a 6-person team ships faster when the designer stops hand-deciding button states at 11pm. Seven core components, production-ready: buttons, inputs, cards, dropdowns, icons, navigation bar, and table rows.</p>
+    </div>
+
+    <div class="ds-grid">
+      <figure><img src="./assets/design-system/Buttons.png" alt="Buttons"><figcaption>Buttons</figcaption></figure>
+      <figure><img src="./assets/design-system/Inputs.png" alt="Inputs"><figcaption>Inputs</figcaption></figure>
+      <figure><img src="./assets/design-system/Cards.png" alt="Cards"><figcaption>Cards</figcaption></figure>
+      <figure><img src="./assets/design-system/Drop%20down.png" alt="Dropdowns"><figcaption>Dropdowns</figcaption></figure>
+      <figure><img src="./assets/design-system/Icons.png" alt="Icons"><figcaption>Icons</figcaption></figure>
+      <figure><img src="./assets/design-system/Navigation%20bar.png" alt="Navigation bar"><figcaption>Navigation bar</figcaption></figure>
+      <figure><img src="./assets/design-system/Table.png" alt="Table rows"><figcaption>Table rows</figcaption></figure>
+    </div>
+
+    <div class="wrap" style="padding:0">
+      <h3>Dark mode</h3>
+      <p><strong>Dark mode wasn't a toggle for power users — it was the bedtime use case.</strong> Two reasons: first, when a parent's phone switches to dark mode at sunset, the app should follow. Fighting the system feels wrong on iOS in 2025. Second, parents reading stories in a half-lit bedroom don't want a blinding cream screen. Dark mode isn't aesthetic here — it's a usability feature for the exact moment the app is used.</p>
+    </div>
+
+    <div class="phone-row">
+      <figure>
+        <img src="./assets/dark-mode/Cat%20stories.png" alt="Dark mode — cat stories">
+        <figcaption>Dark mode · feed</figcaption>
+      </figure>
+      <figure>
+        <img src="./assets/dark-mode/Story%20detail%20screen.png" alt="Dark mode — story detail">
+        <figcaption>Dark mode · story detail</figcaption>
+      </figure>
+      <figure>
+        <img src="./assets/dark-mode/Subscription.png" alt="Dark mode — subscription">
+        <figcaption>Dark mode · subscription</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6 — Design details -->
+<section id="details">
+  <div class="wrap">
+    <span class="label">05 · Design details</span>
+    <h2>Four small craft moments.</h2>
+    <p>The parts that don't fit anywhere else but matter.</p>
+
+    <h3>The ghost empty state</h3>
+    <p>Every app has an empty search result. Most use a stock magnifying glass. We drew a ghost. Small detail — kids notice it, parents smile, the frustration of "no results" gets softened by a beat of character. <strong>Empty states are where brand voice matters most</strong>, because it's where the user is the most disappointed.</p>
+
+    <figure class="phone-frame">
+      <img src="./assets/screenshots/Search%20no%20results.png" alt="Empty search state with custom ghost illustration">
+      <figcaption>Custom ghost — not a stock icon</figcaption>
+    </figure>
+
+    <h3>Custom everything</h3>
+    <p>9 hand-drawn character sprites. 8 hand-drawn place illustrations. Custom snail loading animation. Custom ghost empty state. Easier path: Noun Project subscription + Lottie packs + ship in half the time. We drew it ourselves because <em>"kids want to see themselves"</em> doesn't work with generic icons. The illustrations are what makes the product feel human — which matters disproportionately in a category where people are suspicious of AI.</p>
+
+    <div class="svg-grid">
+      <figure><img src="./assets/characters/Property%201%3DBoy.svg" alt="Boy character"><figcaption>Boy</figcaption></figure>
+      <figure><img src="./assets/characters/Property%201%3DGirl.svg" alt="Girl character"><figcaption>Girl</figcaption></figure>
+      <figure><img src="./assets/characters/Property%201%3DBear.svg" alt="Bear character"><figcaption>Bear</figcaption></figure>
+      <figure><img src="./assets/characters/Property%201%3DPanda.svg" alt="Panda character"><figcaption>Panda</figcaption></figure>
+      <figure><img src="./assets/characters/Property%201%3DFox.svg" alt="Fox character"><figcaption>Fox</figcaption></figure>
+      <figure><img src="./assets/characters/Property%201%3DKitty.svg" alt="Kitty character"><figcaption>Kitty</figcaption></figure>
+      <figure><img src="./assets/characters/Property%201%3DRabbit.svg" alt="Rabbit character"><figcaption>Rabbit</figcaption></figure>
+      <figure><img src="./assets/characters/Property%201%3DHedgehog.svg" alt="Hedgehog character"><figcaption>Hedgehog</figcaption></figure>
+      <figure><img src="./assets/characters/Property%201%3DCustom.svg" alt="Custom character"><figcaption>Custom</figcaption></figure>
+    </div>
+
+    <div class="svg-grid">
+      <figure><img src="./assets/places/Arctic.svg" alt="Arctic"><figcaption>Arctic</figcaption></figure>
+      <figure><img src="./assets/places/Casttle.svg" alt="Castle"><figcaption>Castle</figcaption></figure>
+      <figure><img src="./assets/places/City.svg" alt="City"><figcaption>City</figcaption></figure>
+      <figure><img src="./assets/places/Desert.svg" alt="Desert"><figcaption>Desert</figcaption></figure>
+      <figure><img src="./assets/places/Farm.svg" alt="Farm"><figcaption>Farm</figcaption></figure>
+      <figure><img src="./assets/places/Mountins.svg" alt="Mountains"><figcaption>Mountains</figcaption></figure>
+      <figure><img src="./assets/places/Space.svg" alt="Space"><figcaption>Space</figcaption></figure>
+      <figure><img src="./assets/places/unknow%20place.svg" alt="Custom place"><figcaption>Custom</figcaption></figure>
+    </div>
+
+    <h3>Kids type their own names</h3>
+    <p>The "name your hero" input looks trivial. It's the moment the research pays off. Parents said their kids wanted to see themselves in the story — the smallest possible UI for that is a text field. A 4-year-old types <em>"Emma."</em> The AI makes Emma the hero. Emma hears her name in a story about herself. <strong>The finding becomes the product.</strong></p>
+  </div>
+</section>
+
+<!-- Section 7 — Cuts & trade-offs -->
+<section id="cuts">
+  <div class="wrap">
+    <span class="label">06 · Cuts &amp; trade-offs</span>
+    <h2>What didn't ship.</h2>
+    <p>Every shipped product is a monument to what didn't make it. Three things that got cut or traded off.</p>
+
+    <h3>Cut — the explanatory onboarding</h3>
+    <p>The team had mockups for a 3-screen feature tour: "Create personal stories", "One-click story generation", "Audiobook mode." All three were production-ready. I made the case for killing them (see Decision 1). Zero users miss them.</p>
+
+    <h3>Cut — "one-click lazy mode"</h3>
+    <p>A separate quick-tap button that would've generated a random story with no personalization. The client wanted it as a fallback. I pushed back: it undermines the whole personalization pitch and trains users to expect generic output. We shipped without it. <strong>If retention data shows parents avoid the 3-step wizard, it's the first thing I'd reconsider.</strong></p>
+
+    <h3>Trade-off — English-first copy at launch</h3>
+    <p>The app targets DACH but UI copy was written in English first, then localized. I pushed for simultaneous drafting in both languages to avoid English-shaped sentences in the German version. We didn't have the budget. The German version shipped with a few awkward translations that got fixed in v0.1.1. <strong>Next time: fight harder.</strong></p>
+  </div>
+</section>
+
+<!-- Section 8 — Shipped + What I'd do differently -->
+<section id="shipped">
+  <div class="wrap">
+    <span class="label">07 · Shipped</span>
+    <h2>Live in the App Store.</h2>
+
+    <div class="shipped-card">
+      <h3>Sleep Well Stories — live since December 8, 2025.</h3>
+      <p>Available in German and English at €2.99/month. Runs on iPhone, iPad, Mac (M1+), and Apple Vision.</p>
+      <div class="meta">
+        <span><b>RELEASED</b> · Dec 8, 2025</span>
+        <span><b>VERSION</b> · 0.1.1</span>
+        <span><b>PRICE</b> · €2.99 / month</span>
+        <span><b>PLATFORMS</b> · iOS, iPadOS, macOS, visionOS</span>
+      </div>
+      <a href="https://apps.apple.com/de/app/sleepwellstories/id6753594341" target="_blank" rel="noopener" class="btn" style="background:var(--orange);color:var(--purple)">View on the App Store →</a>
+    </div>
+
+    <h3>What held up</h3>
+    <p>Every one of the six research-driven decisions survived into production:</p>
+    <ul>
+      <li>No explanatory onboarding — straight to creation</li>
+      <li>Delayed registration — first story before signup</li>
+      <li>Structured 3-step wizard — not the prompt box</li>
+      <li>Multi-child profiles</li>
+      <li>Audiobook mode</li>
+      <li>Recurring "Meet the heroes" in the feed</li>
+    </ul>
+    <p>For me, the best signal that the research was the right call is that <strong>none of these decisions got cut under engineering pressure</strong>. The easy path kept showing up in team discussions — <em>"should we add an onboarding just in case?", "what if we put signup on step 2?"</em> — and every time the research answer held.</p>
+
+    <h3>What I'd do differently</h3>
+
+    <h4>1. Test with actual kids earlier, not just parents.</h4>
+    <p>I validated the 3-step wizard with parents. I did not run formal usability sessions with kids aged 3–6. If I had, I'd have caught that the text-only "Hedgehog" label needed an icon — something we added only after informal feedback. A single round of kid testing would've saved a revision cycle.</p>
+
+    <h4>2. Design for the AI's failure modes.</h4>
+    <p>Every screen assumed the AI produced a good story. But AI is stochastic — sometimes it's bland, off-tone, or just weird. There's no regenerate button, no "report this story", no rating mechanism in v1. If a kid gets a bad story, the parent has no recourse. <strong>v2 needs failure-mode UI</strong>: regenerate, report, rate, save-as-favorite.</p>
+
+    <h4>3. Champion German-first copy harder.</h4>
+    <p>Mentioned in the cuts section. Next time I refuse to sign off on UI copy written only in one language for a bilingual product. Translation-shaped sentences hurt trust in a way that's hard to measure.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="wrap">
+    <p>Thanks for reading. If you're hiring a product designer who ships, you know where to find me.</p>
+    <a href="../../index.html" class="btn">← Back to the room</a>
+  </div>
+</footer>
+
+<script>
+// Top bar — show after user scrolls past hero
+(function(){
+  var topbar=document.querySelector('.topbar');
+  if(!topbar)return;
+  var ticking=false,threshold=180;
+  function update(){
+    if(window.scrollY>threshold){topbar.classList.add('is-visible');}
+    else{topbar.classList.remove('is-visible');}
+    ticking=false;
+  }
+  window.addEventListener('scroll',function(){
+    if(!ticking){requestAnimationFrame(update);ticking=true;}
+  },{passive:true});
+  update();
+})();
+</script>
+</body>
+</html>
