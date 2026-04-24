@@ -326,7 +326,7 @@ body.is-night #night-tint{opacity:1}
       <p>Product designer based in Germany — 6 years turning fuzzy problems into shipped product.</p>
     </div>
     <div class="mf-note">
-      The full interactive portfolio is built for a bigger screen. Open this site on a laptop or desktop to explore the whole thing — for now, here are the highlights.
+      My portfolio is an interactive pixel game you walk around to learn about my experience and work — and even win prizes and play mini-games along the way. It's desktop-only for now, so open it on a laptop to play through the whole thing.
     </div>
 
     <div class="mf-section">
@@ -505,7 +505,7 @@ body.is-night #night-tint{opacity:1}
         <button class="dt-card" data-prj="otto" data-cat="mobile" type="button">
           <div class="dt-thumb otto"></div>
           <div class="dt-card-body">
-            <div class="dt-card-row"><h3>Otto Wilde</h3><span class="dt-tag live">Behance ↗</span></div>
+            <div class="dt-card-row"><h3>Otto Wilde</h3></div>
             <p>Grill companion app for a connected hardware brand. +35% user engagement.</p>
           </div>
         </button>
@@ -777,7 +777,7 @@ function sendMsg(){
   setTimeout(closeMsg,200);
 }
 const PROJECTS={
-  otto:{url:'https://www.behance.net/gallery/224155251/Otto-Wilde-App',title:'Otto Wilde'},
+  otto:{url:'case-studies/otto-wilde/index.html',title:'Otto Wilde',local:true},
   health:{url:'https://www.behance.net/gallery/174270995/Health-Heroes-App-Mobile-UIUX',title:'Health Heroes'},
   sleep:{url:null,title:'Sleep Well Stories'},
   riiico:{url:null,title:'RIIICO'},
@@ -795,6 +795,10 @@ function openDesktop(){
 function closeDesktop(){dtOv.classList.remove('on');}
 function openProject(key){
   const p=PROJECTS[key];if(!p||!p.url)return;
+  if(p.local){
+    try{sessionStorage.setItem('return_view','desktop');sessionStorage.setItem('wc_seen','1');}catch(e){}
+    window.location.href=p.url;return;
+  }
   window.open(p.url,'_blank','noopener');
 }
 function closeProject(){prjOv.classList.remove('on');prjFrame.src='about:blank';}
@@ -1084,6 +1088,17 @@ ap();setFrame();loop();
   document.getElementById('wc-close').addEventListener('click',close);
   ov.addEventListener('click',function(e){if(e.target===ov)close();});
   document.addEventListener('keydown',function(e){if(ov.classList.contains('on')&&e.key==='Escape')close();});
+})();
+
+// Returning from a case study — drop the user straight back on the desktop/portfolio screen
+(function(){
+  try{
+    if(sessionStorage.getItem('return_view')!=='desktop')return;
+    sessionStorage.removeItem('return_view');
+  }catch(e){return;}
+  if(typeof openDesktop!=='function')return;
+  var wc=document.getElementById('wc-ov');if(wc)wc.classList.remove('on');
+  openDesktop();
 })();
 </script>
 

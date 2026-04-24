@@ -289,7 +289,7 @@
   z-index: 3;
 }
 .study-header {
-  cursor: pointer;
+  cursor: default;
   border: var(--border-4);
   padding: 14px var(--padding-15);
   background-color: transparent;
@@ -297,11 +297,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.study-header:hover {
-  background-color: var(--color-gainsboro-300);
-  border: 1px solid var(--color-gainsboro-100);
-  box-sizing: border-box;
 }
 .case-study {
   position: relative;
@@ -872,7 +867,6 @@
 .rub-steak-with {
   position: relative;
   line-height: var(--lh-16);
-  white-space: pre-wrap;
 }
 .settings2 {
   width: 360px;
@@ -1191,7 +1185,7 @@
   width: 140px;
   height: 140px;
   object-fit: cover;
-  z-index: 1;
+  z-index: 10;
 }
 .recipe-component {
   align-self: stretch;
@@ -2459,6 +2453,7 @@
   left: 684px;
   max-height: 100%;
   object-fit: contain;
+  z-index: 10;
 }
 .launch-data,
 .section7 {
@@ -3279,5 +3274,45 @@
   .thanks-for-watching {
     font-size: var(--fs-27);
     line-height: 36px;
+  }
+}
+
+/* Section headers: 12-col grid per Figma spec.
+   Title column spans 1-7, body column spans 8-12 (body always starts at col 8). */
+@media screen and (min-width: 1351px) {
+  .scope,
+  .survey-header,
+  .persona-header,
+  .interview-header,
+  .solution-header,
+  .frame-parent26,
+  .frame-parent33 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
+    align-items: start;
+    gap: 20px;
+  }
+  .scope > .scope-elements,
+  .survey-header > .vector-parent,
+  .persona-header > .vector-group,
+  .interview-header > .vector-container,
+  .solution-header > .vector-container,
+  .frame-parent26 > .vector-container,
+  .frame-parent33 > .vector-container {
+    grid-column: 1 / 8;
+    width: auto;
+    max-width: none;
+  }
+  .scope > .this-case-study,
+  .survey-header > .survey-description,
+  .persona-header > .persona-description,
+  .interview-header > .survey-description,
+  .solution-header > .persona-description,
+  .frame-parent26 > .persona-description,
+  .frame-parent33 > .persona-description {
+    grid-column: 8 / -1;
+    width: auto;
+    max-width: 100%;
   }
 }
