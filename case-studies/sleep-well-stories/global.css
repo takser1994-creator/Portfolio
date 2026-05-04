@@ -1,0 +1,171 @@
+/* Font */
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 700.0;
+*
+* available axes:
+'wght' (range from 200.0 to 700.0
+*/
+@font-face {
+  font-family: 'ClashGrotesk-Variable';
+  src: url('public/fonts/ClashGrotesk/Fonts/TTF/ClashGrotesk-Variable.ttf') format('truetype');
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+*{
+  font-family: ClashGrotesk-Variable;
+}
+
+:root {
+  /* Figma Variables */
+
+  /* Spacing */
+  --Caption-2: 11px;
+  --Depth-0: 0px;
+  --Depth-100: 4px;
+  --Depth-400: 16px;
+  --Depth-800: 32px;
+  --Depth-Negative-100: -4px;
+  --H3: 18px;
+  --Icons: 24px;
+
+  /* Color */
+  --Black-100: rgba(12, 12, 13, 0.05);
+  --Black-200: rgba(12, 12, 13, 0.1);
+  --Bright-Blue: #4a90e2;
+  --Dark-Gray: #4a4a4a;
+  --Dark-Gray1: #4a4a4a;
+  --Stroke: #171717;
+  --Text: #292929;
+  --Transparent-Dark-Gray: rgba(74, 74, 74, 0.44);
+  --White: #fff;
+
+  /* Common Style Variables */
+
+  /* Color */
+  --color-black: #000;
+  --color-cornflowerblue-100: #1478cb;
+  --color-gainsboro-100: #dedede;
+  --color-gainsboro-200: #d9d9d9;
+  --color-gold-100: #f7e043;
+  --color-gold-200: #ffdc15;
+  --color-gray-100: #fefefe;
+  --color-gray-200: #252525;
+  --color-gray-300: rgba(255, 255, 255, 0.77);
+  --color-lavender: #edeeff;
+  --color-pink: #ffcfcf;
+  --color-plum: #9d88cd;
+  --color-slateblue: #7456b8;
+  --color-whitesmoke-100: #f6f6f6;
+  --color-whitesmoke-200: #f5f5f7;
+  --color-whitesmoke-300: #f3f3f3;
+  --color-whitesmoke-400: rgba(246, 246, 246, 0.88);
+
+  /* Gap */
+  --gap-1: 1px;
+  --gap-8: 8px;
+  --gap-12: 12px;
+  --gap-16: 16px;
+  --gap-20: 20px;
+  --gap-22: 22px;
+  --gap-24: 24px;
+  --gap-30: 30px;
+  --gap-40: 40px;
+  --gap-48: 48px;
+  --gap-50: 50px;
+  --gap-60: 60px;
+  --gap-100: 100px;
+
+  /* Padding */
+  --padding-0: 0px;
+  --padding-1: 1px;
+  --padding-3: 3px;
+  --padding-10: 10px;
+  --padding-12: 12px;
+  --padding-16: 16px;
+  --padding-18: 18px;
+  --padding-20: 20px;
+  --padding-21: 21px;
+  --padding-22: 22px;
+  --padding-24: 24px;
+  --padding-26: 26px;
+  --padding-30: 30px;
+  --padding-39: 39px;
+  --padding-40: 40px;
+  --padding-60: 60px;
+  --padding-80: 80px;
+
+  /* BorderRadius */
+  --br-0: 0px;
+  --br-2: 2px;
+  --br-4: 4px;
+  --br-12: 12px;
+  --br-24: 24px;
+  --br-44: 44px;
+  --br-100: 100px;
+
+  /* Font */
+  --font-clash-grotesk-variable: Clash Grotesk Variable;
+  --font-inter: Inter;
+  --font-open-sans: Open Sans;
+  --font-raleway: Raleway;
+
+  /* FontSize */
+  --fs-16: 16px;
+  --fs-19: 19px;
+  --fs-20: 20px;
+  --fs-22: 22px;
+  --fs-24: 24px;
+  --fs-26: 26px;
+  --fs-28: 28px;
+  --fs-31: 31px;
+  --fs-32: 32px;
+  --fs-36: 36px;
+  --fs-42: 42px;
+  --fs-52: 52px;
+
+  /* Borders */
+  --border-1: 2px solid var(--White);
+  --border-2: 2px solid var(--color-gainsboro-100);
+
+  /* Shadows */
+  --b: 0px 18.125px 27.19px -9.06px rgba(209, 209, 209, 0.25);
+  --Drop-Shadow-400:
+    0px 16px 32px -4px var(--Black-200), 0px 4px 4px -4px var(--Black-100);
+
+  /* Gradients */
+  --gradient-1: radial-gradient(
+    100.52% 126.97% at 6.12% 5.46%,
+    var(--color-plum),
+    #c1acf2
+  );
+
+  /* WidthHeights */
+  --height-12: 12px;
+  --height-32: 32px;
+  --height-60: 60px;
+  --height-760: 760px;
+  --width-12: 12px;
+  --width-24: 24px;
+  --width-32: 32px;
+  --width-60: 60px;
+  --width-400: 400px;
+  --width-588: 588px;
+  --width-668: 668px;
+  --width-1360: 1360px;
+
+  /* LetterSpacings */
+  --ls-0_01: 0.01;
+
+  --left-0: 0px;
+  --top-0: 0px;
+}

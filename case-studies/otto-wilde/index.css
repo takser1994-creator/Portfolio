@@ -1876,13 +1876,21 @@
   font-weight: 600;
   font-family: var(--font-clash-grotesk);
 }
-.otto-icon {
+.otto-icon-wrap {
   align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 var(--padding-20);
+  box-sizing: border-box;
+}
+.otto-icon {
+  width: 100%;
+  max-width: var(--width-1360);
+  display: block;
   position: relative;
-  max-width: 100%;
   overflow: hidden;
-  max-height: 100%;
   object-fit: cover;
+  border-radius: var(--br-24);
 }
 .section4 {
   background-color: var(--color-gray-1300);
@@ -2616,6 +2624,9 @@
   z-index: 1;
   flex-shrink: 0;
   opacity: 0.2;
+  object-fit: cover;
+  object-position: top left;
+  pointer-events: none;
 }
 .finishing {
   display: flex;
